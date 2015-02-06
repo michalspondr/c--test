@@ -22,7 +22,7 @@ int main( int argc, char** argv )
     const unsigned int msize=800;
     const double blockcount = 16;   // should be a multiple of 256 if you want colors 0 and 255
 
-	Mat image = Mat(Size(msize, msize), CV_8UC1);
+    Mat image = Mat(Size(msize, msize), CV_8UC1);
 
     double color=0;
 
@@ -42,15 +42,15 @@ int main( int argc, char** argv )
     }
 
     // write image to a file
-	imwrite("grayscale.png", image);
+    imwrite("grayscale.png", image);
 
     std::string name = std::to_string((int)(blockcount*blockcount)) + " shades of gray";
 
     // show the window of generated palette
-	namedWindow( name, CV_WINDOW_AUTOSIZE);
-	imshow( name, image);
+    namedWindow( name, CV_WINDOW_AUTOSIZE);
+    imshow( name, image);
     waitKey(0);
 
-	return 0;
+    return 0;
 }
 
